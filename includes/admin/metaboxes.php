@@ -402,9 +402,9 @@ class Envira_Gallery_Metaboxes_Lite {
                     <br><code><?php echo '[envira-gallery slug="' . $gallery_data['config']['slug'] . '"]'; ?></code>
                 <?php endif; ?>
                 <p><?php _e( 'You can also place this gallery into your template files by using the template tag(s) below:', 'envira-gallery' ); ?></p>
-                <code><?php echo 'if ( function_exists( \'envira_gallery\' ) ) { envira_gallery( \'' . $post->ID . '\' ); }'; ?></code>
+                <code><?php echo 'do_action( \'envira_gallery\', \'' . $post->ID . '\' );'; ?></code>
                 <?php if ( ! empty( $gallery_data['config']['slug'] ) ) : ?>
-                    <br><code><?php echo 'if ( function_exists( \'envira_gallery\' ) ) { envira_gallery( \'' . $gallery_data['config']['slug'] . '\', \'slug\' ); }'; ?></code>
+                    <br><code><?php echo 'do_action( \'envira_gallery\', \'' . $gallery_data['config']['slug'] . '\', \'slug\' );'; ?></code>
                 <?php endif; ?>
             </div>
         </div>

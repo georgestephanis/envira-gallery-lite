@@ -520,4 +520,7 @@ if ( ! function_exists( 'envira_gallery' ) ) {
         }
 
     }
+
+    // Make it safer for folks to call galleries from template files.
+    add_action( 'envira_gallery', 'envira_gallery', 10, 4 );
 }

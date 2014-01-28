@@ -105,7 +105,7 @@ class Envira_Gallery_Posttype_Admin_Lite {
                 break;
 
             case 'template' :
-                echo '<code>if ( function_exists( \'envira_gallery\' ) ) { envira_gallery( \'' . $post_id . '\' ); }</code>';
+                echo '<code>do_action( \'envira_gallery\', \'' . $post_id . '\' );</code>';
                 break;
 
             case 'images' :
